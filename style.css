@@ -70,7 +70,7 @@ body {
     margin:0 auto;
     min-width:800px;
     text-align: center;
-    margin-bottom:400px;
+    margin-bottom:300px;
 }
 .portofolio h1{
     font-size: 5em;
@@ -121,7 +121,31 @@ body {
 }
 /* akhir portofolio */
 
-
+/* awal about me */
+.aboutme {
+    text-align: center;
+    margin-bottom: 400px;
+}
+.aboutme h4 {
+    font-size: 1.7em;
+    font-family: 'Open Sans', sans-serif;
+    margin:20px;
+}
+.container-aboutme {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+}
+.aboutme .gambar-kecil {
+    height:200px;
+    width:200px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.information p {
+    text-align: justify;
+}
+/* akhir about me */
 
 
 
