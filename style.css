@@ -10,8 +10,6 @@ body {
     margin:20px 50px;
     font-size:16px;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Roboto', sans-serif; */
 }
 
 .container {
@@ -34,7 +32,7 @@ body {
 }
 
 .nama {
-    color:#008080;
+    color:#05a5a5;
 }
 /* akhir header */
 
@@ -43,7 +41,7 @@ body {
     width:800px;
     margin: 150px auto;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom:400px;
 }
 
 .home .heroimage {
@@ -61,7 +59,6 @@ body {
 }
 .home h3 {
     margin-bottom:20px;
-    font-family: 'Open Sans', sans-serif;
 }
 /* akhir home */
 
@@ -70,7 +67,7 @@ body {
     margin:0 auto;
     min-width:800px;
     text-align: center;
-    margin-bottom:300px;
+    margin-bottom:400px;
 }
 .portofolio h1{
     font-size: 5em;
@@ -79,7 +76,7 @@ body {
 .portofolio h4{
     font-size: 1.7em;
     line-height: 10px;
-    font-family: 'Open Sans', sans-serif;
+    color:#008080;
 }
 .portofolio .cards {
     display:grid;
@@ -87,9 +84,6 @@ body {
     min-width:800px;
     row-gap:50px;
     column-gap:30px;
-}
-.card h2 {
-    font-family: 'Open Sans', sans-serif;
 }
 .kotak {
     width:300px;
@@ -112,12 +106,11 @@ body {
     background-image: url(img/movie.png);
 }
 .tombolGithub {
-    background-color:#008080;
+    background-color:#189e9e;
     width:150px;
     margin: 10px auto;
     padding:10px 0;
     border-radius: 30px;
-    font-family: 'Roboto', sans-serif;
 }
 /* akhir portofolio */
 
@@ -128,8 +121,8 @@ body {
 }
 .aboutme h4 {
     font-size: 1.7em;
-    font-family: 'Open Sans', sans-serif;
     margin:20px;
+    color:#008080;
 }
 .container-aboutme {
     display:grid;
@@ -149,10 +142,47 @@ body {
 /* akhir about me */
 
 
+/* awal contact */
+.contact {
+    margin:auto;
+    text-align: center;
+    text-transform: capitalize;
+}
 
-
-
-
+.contact form {
+    text-align: left;
+    margin-top: 50px;
+}
+.contact form input {
+    width:100%;
+    border-radius: 5px;
+    height:30px;
+    border:2px solid black;
+    margin-bottom: 20px;
+}
+#pesan {
+    height: 150px;
+    text-align: left;
+}
+#contact {
+    font-size: 1.7em;
+    line-height: 5px;
+    color:#008080;
+}
+.contact h1{
+    font-size: 5em;
+    margin-bottom: 5px;
+}
+.contact form button {
+    width:100%;
+    height: 40px;
+    background-color: #189e9e;
+    border:1px solid #fff;
+    border-radius: 20px;
+    color:#fff;
+    font-size: 1em;
+}
+/* akhir contact */
 
 
 
