@@ -21,11 +21,12 @@ body {
 /* header */
 .header {
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
 }
 .navbar {
     display:flex;
     justify-content: space-around;
+    align-items: center;
 }
 .header h4 {
     font-size: 1.1em;
@@ -33,6 +34,24 @@ body {
 
 .nama {
     color:#05a5a5;
+}
+.toggle-button {
+    width:40px;
+    height: 10px;
+    background-color: #000;
+    display:inline-block;
+    border-radius: 20px;
+}
+
+.bulatan {
+    width:10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.mode span {
+    font-weight:500;
+    font-size:1.1em;
 }
 /* akhir header */
 
@@ -186,6 +205,33 @@ body {
 
 
 
+
+/* class animasi */
+.dark {
+    animation:geserKanan forwards .8s;
+}
+.light {
+    animation:geserKiri forwards .8s;
+}
+/* akhir class animasi */
+
+
+
+
+/* animasi */
+@keyframes geserKanan {
+    to{
+        transform:translateX(30px);
+    }
+}
+@keyframes geserKiri {
+    from {
+        transform:translateX(30px);
+    } to {
+        transform:translateX(0px);
+    }
+}
+/* akhir animasi */
 
 
 
