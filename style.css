@@ -206,35 +206,6 @@ body {
 
 
 
-/* class animasi */
-.dark {
-    animation:geserKanan forwards .8s;
-}
-.light {
-    animation:geserKiri forwards .8s;
-}
-/* akhir class animasi */
-
-
-
-
-/* animasi */
-@keyframes geserKanan {
-    to{
-        transform:translateX(30px);
-    }
-}
-@keyframes geserKiri {
-    from {
-        transform:translateX(30px);
-    } to {
-        transform:translateX(0px);
-    }
-}
-/* akhir animasi */
-
-
-
 
 
 
