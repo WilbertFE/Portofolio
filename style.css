@@ -7,9 +7,9 @@
 body {
     background-color: #001C33;
     color:#fff;
-    margin:20px 50px;
     font-size:16px;
     font-family: 'Montserrat', sans-serif;
+    margin:0 50px;
 }
 
 .container {
@@ -21,7 +21,15 @@ body {
 /* header */
 .header {
     display:grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr .45fr;
+    align-items: center;
+    height: 50px;
+    background-color:#001B2D;
+    min-width:992px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
 }
 .navbar {
     display:flex;
@@ -34,24 +42,32 @@ body {
 
 .nama {
     color:#05a5a5;
+    margin-left:50px;
+}
+.header .dark-mode span {
+    display:inline-block;
+}
+.dark-mode{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
 }
 .toggle-button {
-    width:40px;
-    height: 10px;
-    background-color: #000;
-    display:inline-block;
+    width:50px;
+    height:19px;
+    background-color: rgb(0,0,0);
     border-radius: 20px;
 }
-
 .bulatan {
-    width:10px;
-    height: 10px;
-    background-color: #fff;
+    width:19px;
+    height:19px;
+    background-color: rgb(255,255,255);
     border-radius: 50%;
+    transition:all 1s;
 }
-.mode span {
-    font-weight:500;
-    font-size:1.1em;
+.dark{
+    font-weight: bold;
 }
 /* akhir header */
 
@@ -205,8 +221,14 @@ body {
 
 
 
-
-
+/* kelas animation */
+.geserKanan {
+    transform:translateX(31px);
+}
+.geserKiri {
+    transform:translateX(0);
+}
+/* akhir animation */
 
 
 
