@@ -147,6 +147,10 @@ body {
     padding:10px 0;
     border-radius: 30px;
 }
+.card a {
+    text-decoration: none;
+    color:#fff;
+}
 /* akhir portofolio */
 
 /* awal about me */
@@ -179,7 +183,7 @@ body {
 
 /* awal contact */
 .contact {
-    margin:auto;
+    margin: 100px auto;
     text-align: center;
     text-transform: capitalize;
 }
@@ -219,6 +223,21 @@ body {
 }
 /* akhir contact */
 
+/* awal lightbox */
+.containerLBox {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+}
+.lightbox {
+    position:fixed;
+    top:30%;
+    background-color: #000;
+    width:40%;
+    height:300px;
+}
+/* akhir lightbox */
 
 
 /* kelas animation */
