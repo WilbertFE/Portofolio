@@ -1,3 +1,4 @@
+// const container = document.querySelector('container');
 
 // fitur darkmode 2.0
 const toggleButton = document.querySelector('.toggle-button');
@@ -22,9 +23,12 @@ toggleButton.addEventListener('click', function(){
 
 // fitur ligthbox
 const kotak = document.querySelectorAll('.kotak');
+let active = false;
 kotak.forEach(function(e){
     e.addEventListener('click', function(){
-        lightBox();
+        if(active === false){
+        lightBox(e.classList[1]);
+        }
     });
 });
 // akhir fitur lightbox
@@ -40,13 +44,16 @@ kotak.forEach(function(e){
 
 
 // functions
-function lightBox (){
-    const containerLBox = document.createElement('div');
-    const fragment = document.createElement('div');
-    containerLBox.classList.add('containerLBox');
-    fragment.classList.add('lightbox');
-    containerLBox.appendChild(fragment);
-    document.body.appendChild(containerLBox);
+function lightBox (namaGambar){
+    active = true;
+    const lightBoxContainer = document.createElement('div');
+    lightBoxContainer.classList.add('lightBoxContainer');
+    const lightBox = document.createElement('div');
+    lightBox.classList.add('lightBox');
+    lightBox.style.backgroundImage = `url(img/${namaGambar}.png)`;
+    lightBoxContainer.appendChild(lightBox);
+    document.body.appendChild(lightBoxContainer);
+    document.body.style.backgroundColor = 'rgba(0,28,51,.9)';
 }
 function lightMode (){
         theme = 'light';
