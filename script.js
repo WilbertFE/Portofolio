@@ -1,26 +1,23 @@
 
-// fitur darkmode 
+// fitur darkmode 2.0
 const toggleButton = document.querySelector('.toggle-button');
 const bulatan = document.querySelector('.bulatan');
 const light = document.querySelector('.light');
 const dark = document.querySelector('.dark');
 const header = document.querySelector('.header');
-let mode = 'dark';
-
-// ngecek light mode atau engga
-if (localStorage.getItem('mode')){
+let theme = 'dark';
+if(localStorage.getItem('theme')){
     lightMode();
 }
-// akhir ngecek
-
 toggleButton.addEventListener('click', function(){
-    if (mode === 'dark'){
+    if (theme === 'dark'){
         lightMode();
     } else {
         darkMode();
     }
 });
-// akhir fitur darkmode
+
+// akhir fitur darkmode 2.0
 
 
 // fitur ligthbox
@@ -52,24 +49,18 @@ function lightBox (){
     document.body.appendChild(containerLBox);
 }
 function lightMode (){
-    mode = 'light';
-    bulatan.classList.remove('geserKiri');
-    bulatan.classList.add('geserKanan');
-    dark.style.fontWeight = 'normal';
-    light.style.fontWeight = 'bold';
-    document.body.style.backgroundColor = '#ddd';
-    document.body.style.color = '#000';
-    header.style.color = '#fff';
-    localStorage.setItem('mode', 'light');
+        theme = 'light';
+        localStorage.setItem('theme', 'light');
+        document.body.classList.toggle('light-mode');
+        header.style.color = '#fff';
+        bulatan.classList.remove('geserKiri');
+        bulatan.classList.add('geserKanan');
 }
 function darkMode (){
-    mode = 'dark';
-    bulatan.classList.remove('geserKanan');
-    bulatan.classList.add('geserKiri');
-    light.style.fontWeight = 'normal';
-    dark.style.fontWeight = 'bold';
-    document.body.style.backgroundColor = '#001C33';
-    document.body.style.color = '#fff';
-    localStorage.removeItem('mode');
+        theme = 'dark';
+        localStorage.removeItem('theme');
+        document.body.classList.toggle('light-mode');
+        bulatan.classList.remove('geserKanan');
+        bulatan.classList.add('geserKiri');
 }
 // akhir functions
