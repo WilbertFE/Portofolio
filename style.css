@@ -14,7 +14,7 @@ body {
 
 .container {
     min-width:992px;
-    max-width:90%;
+    max-width:100%;
     margin:auto;
 }
 
@@ -30,11 +30,16 @@ body {
     top:0;
     left:0;
     width:100%;
+    z-index: 9999;
 }
 .navbar {
     display:flex;
     justify-content: space-around;
     align-items: center;
+}
+.navbar a {
+    text-decoration: none;
+    color:#fff;
 }
 .header h4 {
     font-size: 1.1em;
@@ -73,7 +78,7 @@ body {
 
 /* awal home */
 .home {
-    width:800px;
+    /* width:800px; */
     margin: 150px auto;
     text-align: center;
     margin-bottom:400px;
@@ -100,9 +105,9 @@ body {
 /* awal portofolio */
 .portofolio {
     margin:0 auto;
-    min-width:800px;
+    /* min-width:800px; */
     text-align: center;
-    margin-bottom:400px;
+    margin-bottom:250px;
 }
 .portofolio h1{
     font-size: 5em;
@@ -131,6 +136,10 @@ body {
     background-position: center;
     box-sizing: border-box;
 }
+.kotak:hover {
+    cursor:pointer;
+    opacity:.8;
+}
 .card:first-child .kotak {
     background-image: url(img/calculator.png);
 }
@@ -146,6 +155,11 @@ body {
     margin: 10px auto;
     padding:10px 0;
     border-radius: 30px;
+}
+.tombolGithub:hover {
+    cursor:pointer;
+    text-decoration:underline;
+    color:rgb(0,0,255);
 }
 .card a {
     text-decoration: none;
@@ -191,6 +205,8 @@ body {
 .contact form {
     text-align: left;
     margin:50px 0;
+    width:90%;
+    margin:20px auto;
 }
 .contact form input {
     width:100%;
@@ -203,7 +219,7 @@ body {
     height: 150px;
     text-align: left;
 }
-#contact {
+.tulisanContact {
     font-size: 1.7em;
     line-height: 5px;
     color:#008080;
@@ -231,7 +247,7 @@ body {
 }
 .lightBox {
     position:fixed;
-    top:15%;
+    top:12%;
     background-color: #fff;
     width:600px;
     height:500px;
@@ -239,6 +255,23 @@ body {
     background-size: cover;
     background-position: center;
     border:2px solid #000;
+    animation:fadeIn .5s;
+    display:flex;
+    flex-direction: row-reverse;
+}
+.xButton {
+    width:50px;
+    height:50px;
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    color:#fff;
+    line-height: 50px;
+    margin:5px;
+    font-weight: bold;
+}
+.xButton:hover {
+    cursor:pointer;
 }
 /* akhir lightbox */
 
@@ -249,6 +282,20 @@ body {
 }
 .geserKiri {
     transform:translateX(0);
+}
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    } to {
+        opacity:1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity:1;
+    } to {
+        opacity:0;
+    }
 }
 /* akhir animation */
 
