@@ -13,9 +13,9 @@ body {
 }
 
 .container {
-    min-width:992px;
-    max-width:100%;
-    margin:auto;
+    /* min-width:992px; */
+    width:100%;
+    margin:0 auto;
 }
 
 /* header */
@@ -25,7 +25,7 @@ body {
     align-items: center;
     height: 50px;
     background-color:#001B2D;
-    min-width:992px;
+    /* min-width:992px; */
     position:fixed;
     top:0;
     left:0;
