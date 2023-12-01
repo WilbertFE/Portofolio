@@ -76,10 +76,7 @@ body {
 }
 /* syntax default */
 .humburger-menu {
-    width:100px;
-    height:100px;
     display:none;
-    background-color: red;
 }
 /* akhir syntax default */
 
@@ -92,6 +89,31 @@ body {
     }
     .dark-mode {
         display:none;
+    }
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .humburger-menu {
+        display:flex;
+        justify-self:flex-end;
+        margin-right: 20px;
+        flex-direction: column;
+        height:20px;
+        justify-content: space-between;
+    }
+    .humburger-menu span:first-child {
+        transform-origin: 0 0;
+    }
+    .humburger-menu span:last-child {
+        transform-origin: 0 100%;
+    }
+    .humburger-menu span {
+        display:block;
+        width:28px;
+        height:3px;
+        background-color: rgb(255,255,255);
+        border-radius: 3px;
+        transition:all .5s;
     }
 }
 @media only screen and (min-width:768px) and (max-width:991px){
@@ -332,21 +354,3 @@ body {
     color:#000;
 }
 /* akhir kelas kelas responsive */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
