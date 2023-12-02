@@ -110,7 +110,7 @@ body {
         justify-content: space-evenly;
         z-index: -1;
         width:100%;
-        transform:translateY(-100%);
+        transform:translateX(-100%);
         transition: all 1s;
         opacity:0;
     }
@@ -129,7 +129,7 @@ body {
     }
     .humburger-animation {
         opacity:1;
-        transform:translateY(0);
+        transform:translateX(0);
     }
 }
 
