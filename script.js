@@ -36,6 +36,7 @@ kotak.forEach(function(e){
 const humburgerMenu = document.querySelector('.humburger-menu');
 const span = document.querySelectorAll('.humburger-menu span');
 let cekHumburger = false;
+const navbar = document.querySelector('.navbar');
 humburgerMenu.addEventListener('click', function(){
     animasiHumburger();
 });
@@ -97,6 +98,7 @@ function animasiHumburger(){
         span[1].style.transform = 'scale(0)';
         span[1].style.opacity = '0';
         span[2].style.transform = 'rotate(-45deg) translate(-1px,0)';
+        navbar.classList.toggle('humburger-animation');
         for (i=0; i<span.length; i++){
             span[i].style.backgroundColor = 'rgb(255,0,0)';
         }
@@ -106,6 +108,7 @@ function animasiHumburger(){
         span[1].style.transform = 'scale(1)';
         span[1].style.opacity= '1';
         span[2].style.transform = 'rotate(0deg) translate(0,0)';
+        navbar.classList.toggle('humburger-animation');
         for (i=0; i<span.length; i++){
             span[i].style.backgroundColor = 'rgb(255,255,255)';
         }

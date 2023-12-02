@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-    min-width:992px;
     width:100%;
+    min-width: 992px;
     box-sizing: border-box;
-    padding:0 50px;
+    padding:0 25px;
 }
 
 /* header */
@@ -29,7 +29,7 @@ body {
     top:0;
     left:0;
     width:100%;
-    z-index: 9999;
+    z-index: 1;
     min-width: 992px;
 }
 .navbar {
@@ -74,48 +74,65 @@ body {
 .dark{
     font-weight: bold;
 }
-/* syntax default */
+/* humburger-menu */
 .humburger-menu {
     display:none;
+    justify-self:flex-end;
+    margin-right: 20px;
+    flex-direction: column;
+    height:20px;
+    justify-content: space-between;
 }
-/* akhir syntax default */
-
-/* responsive breakpoint */
+.humburger-menu span:first-child {
+    transform-origin: 0 0;
+}
+.humburger-menu span:last-child {
+    transform-origin: 0 100%;
+}
+.humburger-menu span {
+    display:block;
+    width:28px;
+    height:3px;
+    background-color: rgb(255,255,255);
+    border-radius: 3px;
+    transition:all .5s;
+}
 
 /* akhir responsive breakpoint */
 @media only screen and (max-width:767px){
     .navbar {
-        display:none;
+        position:absolute;
+        flex-direction: column;
+        background-color: #001B2D;
+        top:0;
+        right:0;
+        height: 100vh;
+        justify-content: space-evenly;
+        z-index: -1;
+        width:100%;
+        transform:translateY(-100%);
+        transition: all 1s;
+        opacity:0;
     }
     .dark-mode {
         display:none;
     }
     .header {
         grid-template-columns: repeat(2, 1fr);
+        min-width: 576px;
+    }
+    .container {
+        min-width: 576px;
     }
     .humburger-menu {
         display:flex;
-        justify-self:flex-end;
-        margin-right: 20px;
-        flex-direction: column;
-        height:20px;
-        justify-content: space-between;
     }
-    .humburger-menu span:first-child {
-        transform-origin: 0 0;
-    }
-    .humburger-menu span:last-child {
-        transform-origin: 0 100%;
-    }
-    .humburger-menu span {
-        display:block;
-        width:28px;
-        height:3px;
-        background-color: rgb(255,255,255);
-        border-radius: 3px;
-        transition:all .5s;
+    .humburger-animation {
+        opacity:1;
+        transform:translateY(0);
     }
 }
+
 @media only screen and (min-width:768px) and (max-width:991px){
 
 }
@@ -247,9 +264,10 @@ body {
 
 /* awal contact */
 .contact {
-    margin: 100px auto;
+    margin: 50px auto;
     text-align: center;
     text-transform: capitalize;
+    width:90%;
 }
 
 .contact form {
