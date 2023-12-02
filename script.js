@@ -1,20 +1,27 @@
 const container = document.querySelector('.container');
 // fitur darkmode 2.0
-const toggleButton = document.querySelector('.toggle-button');
-const bulatan = document.querySelector('.bulatan');
+const toggleButton = document.querySelectorAll('.toggle-button');
+const bulatan = document.querySelectorAll('.bulatan');
 const light = document.querySelector('.light');
 const dark = document.querySelector('.dark');
 const header = document.querySelector('.header');
 let theme = 'dark';
-if(localStorage.getItem('theme')){
-    lightMode();
+if(localStorage.getItem('theme0')){
+    lightMode(0);
+    lightMode(1);
+} else if (localStorage.getItem('theme1')){
+    lightMode(1);
+    lightMode(0);
 }
-toggleButton.addEventListener('click', function(){
-    if (theme === 'dark'){
-        lightMode();
-    } else {
-        darkMode();
-    }
+
+toggleButton.forEach((e,i) => {
+    e.addEventListener('click', function(){
+        if (theme === 'dark'){
+            lightMode(i);
+        } else {
+            darkMode(i);
+        }
+    });
 });
 
 // akhir fitur darkmode 2.0
@@ -76,20 +83,21 @@ function lightBox (namaGambar){
     });
     // akhir xButton
 }
-function lightMode (){
+function lightMode (i){
         theme = 'light';
-        localStorage.setItem('theme', 'light');
-        document.body.classList.toggle('light-mode');
+        localStorage.setItem(`theme${i}`, `light`);
+        document.body.classList.add('light-mode');
         header.style.color = '#fff';
-        bulatan.classList.remove('geserKiri');
-        bulatan.classList.add('geserKanan');
+        bulatan[i].classList.remove('geserKiri');
+        bulatan[i].classList.add('geserKanan');
 }
-function darkMode (){
+function darkMode (i){
         theme = 'dark';
-        localStorage.removeItem('theme');
-        document.body.classList.toggle('light-mode');
-        bulatan.classList.remove('geserKanan');
-        bulatan.classList.add('geserKiri');
+        localStorage.removeItem('theme0');
+        localStorage.removeItem('theme1');
+        document.body.classList.remove('light-mode');
+        bulatan[i].classList.remove('geserKanan');
+        bulatan[i].classList.add('geserKiri');
 }
 function animasiHumburger(){
     if (cekHumburger === false){
