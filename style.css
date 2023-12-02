@@ -9,13 +9,13 @@ body {
     color:#fff;
     font-size:16px;
     font-family: 'Montserrat', sans-serif;
-    margin:0 50px;
 }
 
 .container {
-    /* min-width:992px; */
+    min-width:992px;
     width:100%;
-    margin:0 auto;
+    box-sizing: border-box;
+    padding:0 50px;
 }
 
 /* header */
@@ -25,12 +25,12 @@ body {
     align-items: center;
     height: 50px;
     background-color:#001B2D;
-    /* min-width:992px; */
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index: 9999;
+    min-width: 992px;
 }
 .navbar {
     display:flex;
@@ -123,7 +123,6 @@ body {
 
 /* awal home */
 .home {
-    /* width:800px; */
     margin: 150px auto;
     text-align: center;
     margin-bottom:400px;
@@ -150,9 +149,9 @@ body {
 /* awal portofolio */
 .portofolio {
     margin:0 auto;
-    /* min-width:800px; */
     text-align: center;
     margin-bottom:250px;
+    width:95%;
 }
 .portofolio h1{
     font-size: 5em;
@@ -172,7 +171,7 @@ body {
     align-items: center;
 }
 .card {
-    width:50%;
+    width:320px;
 }
 .kotak {
     height:200px;
@@ -219,6 +218,9 @@ body {
 .aboutme {
     text-align: center;
     margin-bottom: 400px;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .aboutme h4 {
     font-size: 1.7em;
@@ -227,7 +229,7 @@ body {
 }
 .container-aboutme {
     display:grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr .8fr;
     justify-items: center;
 }
 .aboutme .gambar-kecil {
@@ -252,9 +254,8 @@ body {
 
 .contact form {
     text-align: left;
-    margin:50px 0;
-    width:90%;
     margin:20px auto;
+    width:90%;
 }
 .contact form input {
     width:100%;
