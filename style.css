@@ -293,6 +293,7 @@ body {
     animation:fadeIn .5s;
     display:flex;
     flex-direction: row-reverse;
+    margin:auto;
 }
 .xButton {
     width:50px;
