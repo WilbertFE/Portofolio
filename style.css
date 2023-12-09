@@ -178,6 +178,9 @@ body {
 .card:nth-child(3) .kotak {
     background-image: url(img/movie.png);
 }
+.card:last-child .kotak {
+    background-image: url(img/weather.png);
+}
 .tombolGithub {
     background-color:#189e9e;
     max-width:150px;
